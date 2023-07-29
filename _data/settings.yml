@@ -1,0 +1,88 @@
+# Theme Settings Configuration File
+##
+### use settings.yml file for configure colors, ui, rtl, sidebar, animation options
+
+### Main Settings
+general:
+  introBackground: "/assets/img/background.jpg"
+  headerBackground: "/assets/img/header.jpg"
+
+### Header
+header:
+  logo:
+    image: "assets/img/logo.png"
+    alt: "logo"
+    title: "Terio"
+  button:
+    text: "Get Started"
+    link: "/contact/"
+
+### Social
+social:
+  - title: "Facebook"
+    icon: "fa-brands fa-facebook-f"
+    url: "https://www.facebook.com/"
+
+  - title: "Twitter"
+    icon: "fa-brands fa-twitter"
+    url: "https://www.twitter.com/"
+
+  - title: "Instagram"
+    icon: "fa-brands fa-instagram"
+    url: "https://www.instagram.com/"
+
+  - title: "Medium"
+    icon: "fa-solid fa-m"
+    url: "https://www.medium.com/"
+
+  - title: "Linkedin"
+    icon: "fa-brands fa-linkedin-in"
+    url: "https://www.linkedin.com/"
+
+### Footer
+footer:
+  description: "Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Morbi in sem quis dui placerat ornare."
+  copyright: "Terio - All Rights Reserved | Developed by <a href=\"https://bslthemes.com\" target=\"_blank\">bslthemes</a>"
+
+  menu:
+    title: "Additional Links"
+    list:
+      - title: "About Us"
+        link: "/about/"
+
+      - title: "Services"
+        link: "/services/"
+
+      - title: "Team"
+        link: "/team/"
+      
+      - title: "News"
+        link: "/blog/"
+
+      - title: "Contact Us"
+        link: "/contact/"
+
+  news:
+    title: "Latest News"
+    numOfItems: 2
+
+  subscribe:
+    title: "Subscribe"
+    text: "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam."
+
+  mailchimp:
+    url: "https://bslthemes.us21.list-manage.com/subscribe/post?u=e57127f785a6d278d2535bd53&amp;id=dd56743ee5&amp;f_id=000dfee1f0" #YOUR MAILCHIMP EMBED FORM URL [form action=""]
+    key: "b_e57127f785a6d278d2535bd53_dd56743ee5" #YOUR MAILCHIMP EMBED FORM KEY VALUE [input hidden name=""]
+
+### Portfolio Filters Settings
+portfolio:
+  homeNumOfItems: 12
+  filters:
+    - name: "Design"
+      slug: "design"
+
+    - name: "Print"
+      slug: "print"
+
+    - name: "Branding"
+      slug: "branding"

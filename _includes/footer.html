@@ -1,0 +1,64 @@
+{% assign footer = site.data.settings['footer'] %}
+{% assign social = site.data.settings['social'] %}
+{% assign header = site.data.settings['header'] %}
+{% assign ui_text = site.data.ui-text['ui_text'] %}
+
+<!-- Footer -->
+<footer class="footer gap no-bottom" style="background-color: #222 ;">
+	<div class="container">
+	  <div class="row">
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="footer-logo">
+			<a href="{{ site.url }}" title="{{ header.logo.title }}"><img alt="{{ header.logo.alt }}" src="{{ header.logo.image | absolute_url }}"></a>
+			<p>
+			  {{ footer.description | safeHTML }}
+			</p>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="links">
+			<h6>{{ footer.menu.title | safeHTML }}</h6>
+			<ul>
+        	  {% for item in footer.menu.list %}
+			  <li><a href="{{ item.link | absolute_url }}">{{ item.title }}</a></li>
+			  {% endfor %}
+			</ul>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  {% if site.posts.size %}
+		  <div class="latest-news">
+			<h6>{{ footer.news.title | safeHTML }}</h6>
+			<ul>
+			  {% for post in site.posts limit: footer.news.numOfItems %}
+			  <li class="pt-4">
+				  <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+				  <span>{{ post.date | date: site.date_format }}</span>
+			  </li>
+			  {% endfor %}
+			</ul>
+		  </div>
+		  {% endif %}
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="latest-news">
+			<h6>{{ footer.subscribe.title | safeHTML }}</h6>
+			<p>{{ footer.subscribe.text | safeHTML }}</p>
+			<form class="subscribe-form" action="{{ footer.subscribe.mailchimp.url }}" method="post" target="_blank">
+				<input type="text" name="EMAIL" placeholder="{{ ui_text.your_email_address }}">
+				<input type="hidden" name="{{ footer.subscribe.mailchimp.key }}">
+				<button type="submit">{{ ui_text.go }}</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	  <div class="footer-bottom">
+		<p>&copy; {{ 'now' | date: "%Y" }} {{ footer.copyright | safeHTML }}</p>
+		<ul>
+      	  {% for link in social %}
+		  <li><a href="{{ link.url }}" target="_blank" title="{{ link.title }}"><i aria-hidden="true" class="{{ link.icon }}"></i></a></li>
+		  {% endfor %}
+		</ul>
+	  </div>
+	</div>
+</footer>
