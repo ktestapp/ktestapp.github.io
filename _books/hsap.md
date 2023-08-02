@@ -10,7 +10,7 @@ short: How to Solve Algorithm Problems
 
 # full details
 full_image: assets/img/books/algo1.png
-preview_link: shop.waleedkhamies.com/b/hsap
+preview_link: https://shop.waleedkhamies.com/b/hsap
 info:
   - label: Book Description
     value: With a focus on practicality, This guide is designed to provide readers with the tools they need to approach problem-solving differently, write efficient code, and clear their coding interviews.
@@ -22,7 +22,7 @@ info:
     value: May, 2023
 
   - label: Website
-    value: shop.waleedkhamies.com/b/hsap
+    value: https://shop.waleedkhamies.com/b/hsap
 
 images:
   - label: "Cover"
