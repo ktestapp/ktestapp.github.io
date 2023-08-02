@@ -9,69 +9,102 @@ main:
   # Home
   - title: "Home"
     url: "/"
-    parent: 1
-    childs:
-        - title: "Home One"
-          url: "/"
+    parent: 0
+#    childs:
+#        - title: "Home One"
+#          url: "/"
 
-        - title: "Home Two"
-          url: "/index-2/"
+#        - title: "Home Two"
+#          url: "/index-2/"
 
-        - title: "Home Three"
-          url: "/index-3/"
+#        - title: "Home Three"
+#          url: "/index-3/"
+          
+  - title: "Books"
+    url: "/books/"
+    parent: 0
 
-  # Pages
-  - title: "Pages"
-    url: "/about/"
-    parent: 1
-    childs:
-        - title: "About"
-          url: "/about/"
+  - title: "Projects"
+    url: "/projects/"
+    parent: 0
 
-        - title: "Team"
-          url: "/team/"
+  - title: "Services"
+    url: "/services/"
+    parent: 0
 
-        - title: "Services"
-          url: "/services/"
-
-        - title: "Pricing"
-          url: "/pricing/"
-
-        - title: "404"
-          url: "/404/"
-
-  # Portfolio
-  - title: "Portfolio"
-    url: "/works/"
-    parent: 1
-    childs:
-        - title: "Portfolio Grid"
-          url: "/works-grid/"
-
-        - title: "Portfolio Masonry"
-          url: "/works-masonry/"
-
-        - title: "Portfolio Metro"
-          url: "/works-metro/"
-
-        - title: "Portfolio Single"
-          url: "/works/boarding-pass-wedding-invitation/"
-
-  # Works
   - title: "Blog"
     url: "/blog/"
-    parent: 1
-    childs:
-        - title: "Blog Grid"
-          url: "/blog/"
+    parent: 0
 
-        - title: "Blog Carousel"
-          url: "/blog-carousel/"
+  - title: "Newsletter"
+    url: "https://khamiesw.substack.com"
+    parent: 0
 
-        - title: "Blog Single"
-          url: "/documentation/2021/07/13/designer-conference-at-florida-2020/"
+  - title: "Store"
+    url: "https://shop.waleedkhamies.com"
+    parent: 0
+    
+  - title: "News"
+    url: "/news/"
+    parent: 0
 
-  # Contact
+  - title: "About"
+    url: "/about/"
+    parent: 0
+
   - title: "Contact"
     url: "/contact/"
     parent: 0
+
+          
+
+  # Pages
+#  - title: "Pages"
+#    url: "/about/"
+#    parent: 1
+#   childs:
+#        - title: "About"
+#          url: "/about/"
+
+#        - title: "Team"
+#          url: "/team/"
+
+#        - title: "Services"
+#          url: "/services/"
+
+#        - title: "Pricing"
+#          url: "/pricing/"
+
+#        - title: "404"
+#          url: "/404/"
+
+  # Portfolio
+#  - title: "Portfolio"
+#    url: "/works/"
+#    parent: 1
+#    childs:
+#        - title: "Portfolio Grid"
+#          url: "/works-grid/"
+
+#        - title: "Portfolio Masonry"
+#          url: "/works-masonry/"
+
+#        - title: "Portfolio Metro"
+#          url: "/works-metro/"
+
+#        - title: "Portfolio Single"
+#          url: "/works/boarding-pass-wedding-invitation/"
+
+  # Works
+#  - title: "Blog"
+#    url: "/blog/"
+#    parent: 1
+#    childs:
+#        - title: "Blog Grid"
+#          url: "/blog/"
+
+#        - title: "Blog Carousel"
+#          url: "/blog-carousel/"
+
+#        - title: "Blog Single"
+#          url: "/documentation/2021/07/13/designer-conference-at-florida-2020/"
