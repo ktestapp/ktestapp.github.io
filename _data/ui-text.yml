@@ -36,7 +36,7 @@ ui_text:
   share_on:             "Share on"
   view_project:         "View Project"
   view_book:            "View Book"
-  launch_site:          "Visit Site"
+  launch_site:          "Access"
   go:                   "Go"
   success_message:      "Thanks, your message is sent successfully."
   developed_by:         "Developed By"

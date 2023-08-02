@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="HandheldFriendly" content="true">
   <meta name="author" content="bslthemes" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Fashion Magazine | Waleed Khamies</title>
+<title>LSTM-VAE: LSTM Variational AutoEncoder | Waleed Khamies</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Fashion Magazine" />
+<meta property="og:title" content="LSTM-VAE: LSTM Variational AutoEncoder" />
 <meta name="author" content="Admin" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis." />
-<meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis." />
+<meta name="description" content="LSTM Variational AutoEncoder (LSTM-Sequence-VAE)" />
+<meta property="og:description" content="LSTM Variational AutoEncoder (LSTM-Sequence-VAE)" />
 <link rel="canonical" href="http://localhost:4000/projects/fashion-magazine" />
 <meta property="og:url" content="http://localhost:4000/projects/fashion-magazine" />
 <meta property="og:site_name" content="Waleed Khamies" />
-<meta property="og:image" content="http://localhost:4000/assets/img/project-7.jpeg" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/vae_lang.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-08-02T00:18:13-06:00" />
+<meta property="article:published_time" content="2023-08-02T03:57:39-06:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/img/project-7.jpeg" />
-<meta property="twitter:title" content="Fashion Magazine" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/vae_lang.jpg" />
+<meta property="twitter:title" content="LSTM-VAE: LSTM Variational AutoEncoder" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Admin"},"dateModified":"2023-08-02T00:18:13-06:00","datePublished":"2023-08-02T00:18:13-06:00","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.","headline":"Fashion Magazine","image":"http://localhost:4000/assets/img/project-7.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/fashion-magazine"},"url":"http://localhost:4000/projects/fashion-magazine"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Admin"},"dateModified":"2023-08-02T03:57:39-06:00","datePublished":"2023-08-02T03:57:39-06:00","description":"LSTM Variational AutoEncoder (LSTM-Sequence-VAE)","headline":"LSTM-VAE: LSTM Variational AutoEncoder","image":"http://localhost:4000/assets/img/projects/vae_lang.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/fashion-magazine"},"url":"http://localhost:4000/projects/fashion-magazine"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -112,7 +112,7 @@
 				
 				
 				<li class="menu-item">
-					<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Newsletter</a>
+					<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
 					
 				</li>
 				
@@ -195,7 +195,7 @@
 			
 			
 			<li class="menu-item">
-				<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Newsletter</a>
+				<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
 				
 			</li>
 			
@@ -238,54 +238,180 @@
 <section class="gap no-top">
 	<div class="container">
 	  <div class="title-blog">
-		<h2>Fashion Magazine</h2>
-		<span>Print</span>
+		<h2>LSTM-VAE: LSTM Variational AutoEncoder</h2>
+		<span>NLP</span>
 	  </div>
 	  <div class="row">
 		<div class="col-xl-8">
 		  <div class="blog-item hoverstyle">
 			
 			<figure>
-			  <img alt="img" class="w-100" src="http://localhost:4000/assets/img/project-7.jpeg">
+			  <img alt="img" class="w-100" src="http://localhost:4000/assets/img/projects/vae_lang.jpg">
 			</figure>
 			
 			
 			<div class="post-content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+				<h2 id="lstm-variational-autoencoder-lstm-sequence-vae">LSTM Variational AutoEncoder (LSTM-Sequence-VAE)</h2>
 
-<p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+<p><a href="https://arxiv.org/abs/1511.06349">A PyTorch Implementation of Generating Sentences from a Continuous Space by Bowman et al. 2015.</a></p>
 
-<p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
+<p><img src="./media/model.jpg" alt="" /></p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<ul>
+  <li><strong><a href="#Introduction">Introduction</a></strong></li>
+  <li><strong><a href="#Setup">Setup</a></strong></li>
+  <li><a href="#Run-the-code"><strong>Run the code</strong></a></li>
+  <li><strong><a href="#Training">Training</a></strong></li>
+  <li><strong><a href="#Inference">Inference</a></strong></li>
+  <li><strong><a href="#Play-with-the-model">Play with the model</a></strong></li>
+  <li><strong><a href="#Connect-with-me">Connect with me</a></strong></li>
+  <li><strong><a href="#License">License</a></strong></li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>This is a  <a href="https://arxiv.org/abs/1511.06349">PyTorch Implementation of Generating Sentences from a Continuous Space by Bowman et al. 2015.</a> where LSTM based VAE is trained on Penn Tree Bank dataset.</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>The code is using <code class="language-plaintext highlighter-rouge">pipenv</code> as a virtual environment and package manager. To run the code, all you need is to install the necessary dependencies. open the terminal and type:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git clone https://github.com/Khamies/Sequence-VAE.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cd Sequence-VAE</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pipenv install</code></li>
+</ul>
+
+<p>And you should be ready to go to play with code and build upon it!</p>
+
+<h3 id="run-the-code">Run the code</h3>
+
+<ul>
+  <li>
+    <p>To train the model, run: <code class="language-plaintext highlighter-rouge">python main.py</code></p>
+  </li>
+  <li>
+    <p>To train the model with specific arguments, run: <code class="language-plaintext highlighter-rouge">python main.py --batch_size=64</code>. The following command-line arguments are available:</p>
+    <ul>
+      <li>Batch size: <code class="language-plaintext highlighter-rouge">--batch_size</code></li>
+      <li>bptt: <code class="language-plaintext highlighter-rouge">--bptt</code></li>
+      <li>Learning rate: <code class="language-plaintext highlighter-rouge">--lr</code></li>
+      <li>Embedding size: <code class="language-plaintext highlighter-rouge">--embed_size</code></li>
+      <li>Hidden size: <code class="language-plaintext highlighter-rouge">--hidden_size</code></li>
+      <li>Latent size: <code class="language-plaintext highlighter-rouge">--latent_size</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="training">Training</h3>
+
+<p>The model is trained on 30 epochs using Adam as an optimizer with a learning rate 0.001. Here are the results from training the LSTM-VAE model:</p>
+
+<ul>
+  <li>
+    <p><strong>KL Loss</strong></p>
+
+    <p><img src="/assets/img/projects/kl.jpg" align="center" height="300" width="500" /></p>
+  </li>
+  <li>
+    <p><strong>Reconstruction loss</strong></p>
+
+    <p><img src="/assets/img/projects/reco.jpg" align="center" height="300" width="500" /></p>
+  </li>
+  <li>
+    <p><strong>KL loss vs Reconstruction loss</strong></p>
+
+    <p><img src="/assets/img/projects/kl_reco.jpg" align="center" height="300" width="500" /></p>
+  </li>
+  <li>
+    <p><strong>ELBO loss</strong></p>
+
+    <p><img src="/assets/img/projects/elbo.jpg" align="center" height="300" width="500" /></p>
+  </li>
+</ul>
+
+<h3 id="inference">Inference</h3>
+
+<h4 id="1-sample-generation">1. Sample Generation</h4>
+
+<p>Here are generated samples from the model. We randomly sampled two latent codes z from standard Gaussian distributions, and specify “like” as the start of the sentence (sos), then we feed them to the decoder. The following are the generated sentences:</p>
+
+<ul>
+  <li>
+    <p><strong>like other countries such as alex powers a former wang marketer</strong></p>
+  </li>
+  <li>
+    <p>**like design and artists have been <unk> by how many <unk>**</unk></unk></p>
+  </li>
+</ul>
+
+<h4 id="2-interpolation">2. Interpolation</h4>
+
+<p>The “President” word has been used as the start of the sentences. We randomly generated two sentences and interpolated between them.</p>
+
+<ul>
+  <li>Sentence 1: <strong>President bush veto power changes meant to be a great number</strong></li>
+  <li>Sentence 2: <strong>President bush veto power opposed to the president of the house</strong></li>
+</ul>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="err">*</span>bush veto power opposed to the president of the house
+ bush veto power opposed to the president of the house.
+ bush veto power opposed to the president of the house.
+ bush veto power opposed to the president of the house.
+ bush veto power opposed to the president of the house.
+ bush veto power opposed to the president of the house.
+ bush veto power opposed to the president of the house.
+ bush veto power opposed to the president of the house.
+ bush veto power opposed to the president ' s council.
+ bush veto power opposed to the president ' s council.
+ bush veto power opposed to the president ' s council.
+ bush veto power opposed to the president ' s council.
+ bush veto power opposed to the president ' s council.
+ bush veto power that kind of <span class="nt">&lt;unk&gt;</span> of natural gas.
+ bush veto power changes to keep the <span class="nt">&lt;unk&gt;</span> and that.
+ bush veto power changes to keep the <span class="nt">&lt;unk&gt;</span> and that.
+ bush veto power changes that is in a telephone to.
+ bush veto power changes that is in a telephone to.
+ bush veto power changes meant to be a great number.
+ <span class="err">*</span>bush veto power changes meant to be a great number
+</code></pre></div></div>
+
+<h2 id="play-with-the-model">Play with the model</h2>
+
+<p>To play with the model, a jupyter notebook has been provided, you can find it <a href="https://github.com/Khamies/LSTM-Sequence-VAE/blob/main/play_with_model.ipynb">here</a></p>
+
+<h3 id="citation">Citation</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> @misc{Khamies2021SequenceVAE,
+ author = {Khamies, Waleed},
+ title = {PyTorch Implementation of Generating Sentences from a Continuous Space by Bowman et al. 2015},
+ year = {2021},
+ publisher = {GitHub},
+ journal = {GitHub repository},
+ howpublished = {\url{https://github.com/Khamies/Sequence-VAE}},
+ }
+</code></pre></div></div>
+
+<h3 id="acknowledgement">Acknowledgement</h3>
+
+<ul>
+  <li>This work has been inspired from <a href="https://github.com/timbmg/Sentence-VAE">Sentence-VAE</a> , where their data prepossessing pipeline is used.</li>
+</ul>
+
+<h3 id="license">License</h3>
+
+<p><img src="https://img.shields.io/github/license/khamies/LSTM-Sequence-VAE" alt="" /></p>
+
 
 			</div>
 			
 			<div class="row align-items-center post-gallery">
 				
-				<div class="col-lg-6">
-				  <div class="portfolimg hoverstyle">
-					<figure>
-					  <img alt="" class="w-100" src="http://localhost:4000/assets/img/project-1.jpeg">
-					</figure>
-					<span>Aliquam tincidunt mauris eu risus.</span>
-				  </div>
-				</div>
-				
-				<div class="col-lg-6">
-				  <div class="portfolimg hoverstyle">
-					<figure>
-					  <img alt="" class="w-100" src="http://localhost:4000/assets/img/project-5.jpeg">
-					</figure>
-					<span>Nunc dignissim risus id metus.</span>
-				  </div>
-				</div>
-				
 			</div>
 
 			
-			
-			<div class="post-content">
-				<p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
-			</div>
 			
 
 		  </div>
@@ -296,12 +422,12 @@
 			
 			<li>
 			  <h4>Project Description : </h4>
-			  <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna.</span>
+			  <span>This is a PyTorch Implementation of Generating Sentences from a Continuous Space by Bowman et al. 2015. where LSTM based VAE is trained on Penn Tree Bank dataset.</span>
 			</li>
 			
 			<li>
-			  <h4>Client : </h4>
-			  <span>Envato</span>
+			  <h4>Tags : </h4>
+			  <span>LSTM, VAE, kl_Divergence, ELBO, Reconstruction Error</span>
 			</li>
 			
 			<li>
@@ -310,13 +436,8 @@
 			</li>
 			
 			<li>
-			  <h4>Website : </h4>
-			  <span>bslthemes.com</span>
-			</li>
-			
-			<li>
 			  <h4>Category :</h4>
-			  <span>Print</span>
+			  <span>NLP</span>
 			</li>
 			<li>
 			  <h4>Share :</h4>
@@ -329,7 +450,7 @@
 			  </ul>
 			</li>
 			<li>
-			  <a href="https://bslthemes.com" class="themebtu">Visit Site</a>
+			  <a href="https://github.com/Khamies/LSTM-Variational-AutoEncoder" class="themebtu">Access</a>
 			</li>
 		  </ul>
 		</div>
