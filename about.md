@@ -7,9 +7,17 @@ layout: builder
 
 # Intro Begin
 intro: true
-intro_title: "We Love<br>What We Do"
-intro_subtitle: "About Us"
+intro_title: "Waleed Khamies"
+intro_subtitle: "Who Am I?"
 # Intro End
 
-sections: about-one,benefits-two,numbers-two,awards,testimonial-four
+sections: about-two,benefits-two
 ---
+
+<!---
+add those to get more sections in the sections item above.
+- numbers-two
+- awards
+- testimonial-four
+-->
+

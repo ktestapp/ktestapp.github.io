@@ -7,9 +7,11 @@ layout: builder
 
 # Intro Begin
 intro: true
-intro_title: "Let Us Know What You're Looking For"
+intro_title: "Let's Chat!"
 intro_subtitle: "Get in Touch"
 # Intro End
 
-sections: contact-form-info,map,offices
+sections: contact-form-info
 ---
+
+<!--->add this to section to show more info: map, offices <--->

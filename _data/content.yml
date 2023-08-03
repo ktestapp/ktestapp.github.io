@@ -43,20 +43,23 @@ hero_under:
 
 ### About Two [ about-two ]
 about_two:
-  image1: "assets/img/welcome-1.jpg"
-  image2: "assets/img/welcome-2.jpg"
-  title: "We're an Independent Design & Development Agency."
-  subtitle: "Dream. Design. Enjoy."
-  description: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel dapibusid, mattis velnisi."
+  image1: "assets/img/me/me.png"
+#image2: "assets/img/welcome-2.jpg"
+  title: "Waleed Khamies"
+  subtitle: "Hello. Salut. مرحبا."
+  description: "Applied ML Scientist"
   items:
-    - title: "User Experience"
-      text: "Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar facilisis."
+    - title: "About Me"
+      text: "I am Waleed Khamies , an applied scientist, and ML grad. I am passionate about learning semantic representations from multimodal data. Also, I am interested in mapping these inferred meanings to autonomous actionable insights. <br>
+Previously, I worked as research engineer intern at Mila under the supervision of Liam Paull, where my research focusing on developing deep learning models that suitable to robotics applications in noisy scenarios. <br>
 
-    - title: "Digital Design"
-      text: "Sed ac risus. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+I received my master at AMMI in Mathematical sciences/Machine learning, where I worked in interpretability of reinforcement learning under the supervision of George konidaris, previously I received my bachelor degree at UofK in Electrical and electronics engineering, where I worked under the supervision of Benjamin Rosman."
 
-  button: "More Services"
-  link: "/services/"
+#    - title: ""
+#      text: "Sed ac risus. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+
+  button: "Contact"
+  link: "/contact/"
 
 ### Ho it works [ how-it-works ]
 how_it_works:
@@ -78,10 +81,10 @@ how_it_works:
 ### Projects Carousel [ projects-carousel ]
 projects_carousel:
   numOfItems: 3
-  title: "Recently<br> Completed<span>Projects</span>"
-  subtitle: "We Help You Build An Online Brand"
-  button: "View More Works"
-  link: "/portfolio"
+  title: "Projects"
+  subtitle: "Here are some accomplished projects during my free time with a cup of tea!"
+  button: "View More Projects"
+  link: "/projects/"
 
 ### Testimonial One [ testimonial-one ]
 testimonial_one:
@@ -367,87 +370,81 @@ cta_two:
 ### Hero Slider Two [ hero-slider-two ]
 hero_slider_two:
   slides:
-    - image: "assets/img/three-page.jpg"
-      title: "Enabling a Better Future<span>Together</span>"
-      subtitle: "How we build the business models and brands of tomorrow."
-      button: "More Services"
-      link: "/services/"
+    - image: "assets/img/ads/algo.png"
+      title: "How to Solve Algorithm Problems is now <span>for Free!</span>"
+      subtitle: "Sharpen your problem solving skill"
+      button: "Download for Free"
+      link: "https://shop.waleedkhamies.com/b/hsap"
 
-    - image: "assets/img/three-page-1.jpg"
-      title: "Digital Agency With A <span>Passion</span> For Marketing."
-      subtitle: "For Small-To-Medium Sized Businesses"
-      button: "More Services"
-      link: "/services/"
+    - image: "assets/img/ads/gen.png"
+      title: "The Creative Engine is coming <span>SOON! </span>"
+      subtitle: "Explore generative modeling in depth with their tensorflow extended (TFX) pipelines."
+      button: "Be the First to Know"
+      link: "https://books.waleedkhamies.com/the_creative_engine"
 
 ### Clients [ clients ]
 clients:
-  title: "See the clients we've delivered experiences for and how we did it."
-  subtitle: "Pellentesque aliquet nibh nec urna."
+  title: "Get familiar with my current services & projects"
+  subtitle: "Learn. Apply. Monetize"
   items:
-    - image: "assets/img/brand-1.png"
-      title: "Company"
-      alt: "Company"
+    - image: "assets/img/ads/zitoonai.png"
+      title: "Zitoona AI"
+      alt: "Zitoona AI"
+      
+    - image: "assets/img/ads/research.png"
+      title: "AI Research"
+      alt: "AI Research"
+      
+    
+    - image: "assets/img/ads/books.png"
+      title: "Books"
+      alt: "Books"
 
-    - image: "assets/img/brand-2.png"
-      title: "Company"
-      alt: "Company"
 
-    - image: "assets/img/brand-3.png"
-      title: "Company"
-      alt: "Company"
+    - image: "assets/img/ads/store.png"
+      title: "Waleed Khamies' Store"
+      alt: "Waleed Khamies' Store"
+      
 
-    - image: "assets/img/brand-4.png"
-      title: "Company"
-      alt: "Company"
-
-    - image: "assets/img/brand-5.png"
-      title: "Company"
-      alt: "Company"
-
-    - image: "assets/img/brand-6.png"
-      title: "Company"
-      alt: "Company"
-
-    - image: "assets/img/brand-7.png"
-      title: "Company"
-      alt: "Company"
-
-    - image: "assets/img/brand-8.png"
-      title: "Company"
-      alt: "Company"
 
 ### Why Choose Us [ why-choose-us ]
 why_choose_us:
-  title: "Why<br> <span>Choose</span> Us"
-  intro: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel dapibusid, mattis velnisi."
+  title: "Recent<br> <span>Books</span>"
+  intro: "Check my recent & upcoming books"
   list:
-    - label: "Ideas"
-      value: "Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet."
+    - label: "• Algorithm "
+      value: ""
 
-    - label: "Solution"
-      value: "Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat."
+    - label: "• Machine Learning"
+      value: ""
+
+    - label: "• Data Science"
+      value: ""
+
+    - label: "• MLOps"
+      value: ""
 
   items_col1:
-    - image: "assets/img/choose-us-1.jpg"
-      title: "Building<br> Your Brand"
-      button: "Read More"
-      link: "/portfolio/"
+    - image: "assets/img/ads/books/1.png"
+      title: "How to Solve Algorithm Problems"
+      button: "View"
+      link: "/books/hsap"
     
-    - image: "assets/img/choose-us-2.jpg"
-      title: "User Experience &<br> Site Design"
-      button: "Read More"
-      link: "/portfolio/"
+    - image: "assets/img/ads/books/2.png"
+      title: "The Creative Engine"
+      button: "View"
+      link: "/books/creative-engine"
 
   items_col2:
-    - image: "assets/img/choose-us-3.jpg"
-      title: "Planning For<br> The Future"
-      button: "Read More"
-      link: "/portfolio/"
+    - image: "assets/img/ads/books/3.png"
+      title: "From Data <br> To Deployment"
+      button: "View"
+      link: "/books/tensorflow"
 
-    - image: "assets/img/choose-us-4.jpg"
-      title: "Search Engine<br> Optimisation"
-      button: "Read More"
-      link: "/portfolio/"
+    - image: "assets/img/ads/books/4.png"
+      title: "The Art Of Translating Data"
+      button: "View"
+      link: "/books/art-of-data-science"
 
 ### Benefits [ benefits ]
 benefits:
@@ -500,19 +497,26 @@ projects_carousel_two:
 
 ### Projects Carousel Two [ projects-carousel-two ]
 services_two:
-  title: "Web Development & Web Design, Award Winning & World-Class."
-  subtitle: "Different. Relevant. Focused."
+  title: "ZitoonAI"
+  subtitle: "Newsletter"
   list:
-    - label: "Result-Oriented Web Design"
-      value: "Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar facilisis."
-    
-    - label: "SEO & Digital Marketing"
-      value: "Sed ac risus. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
+    - label: "Welcome to ZitonnAl Newsletter"
+      value: "Hello, and welcome to ZitoonAI Newsletter, where I talk about Algorithms, Machine Learning, and Data Science."
+
+    - label: "What’s the goal of this Newsletter?"
+      value: "The goal of this newsletter is to act as the group of friends whom I feel very excited to share with them what I am learning every day. Think of it as a big group of friends, except that I am the only person who talks, selfish, huh?"
+
+    - label: "What does the word 'Zitoona' mean?"
+      value: "Zitoona is an Arabic word, and it means 'an olive' in English. But here I use it to mean 'the extraction' in the Arabic Sundanese dialect, indicating that this newsletter works in providing high quality extracted information that related to AI and machine learning."
+
+    - label: "Do you feel home?"
+      value: "If you are interested in learning more about AI, machine learning and algorithm, I will be over the moon by joining my newsletter, and becoming one of the family members. Come and Join Me!"
+
   
-  image1: "assets/img/welcome-3.jpg"
-  image2: "assets/img/welcome-4.jpg"
-  button: "More Services"
-  link: "/services/"
+  image1: "assets/img/ads/zitoonai2.png"
+  image2: "assets/img/ads/zitoonai3.png"
+  button: "Join the Family"
+  link: "https://khamiesw.substack.com/"
 
 ### Testimonial Three [ testimonial-three ]
 testimonial_three:
@@ -555,8 +559,8 @@ about_one:
   title: "We do<br>things differently"
   subtitle: "We Dream Digital"
   text: "
-    <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel dapibusid, mattis velnisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.</p>
-    <p>Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. </p>
+    <p>Hello! I am Waleed Khamies , an applied scientist, and ML grad. I am passionate about learning semantic representations from multimodal data. Also, I am interested in mapping these inferred meanings to autonomous actionable insights. <br>
+Previously, I worked as research engineer intern at Mila under the supervision of Liam Paull, where my research focusing on developing deep learning models that suitable to robotics applications in noisy scenarios. I received my master at AMMI in Mathematical sciences/Machine learning, where I worked in interpretability of reinforcement learning under the supervision of George konidaris, previously I received my bachelor degree at UofK in Electrical and electronics engineering, where I worked under the supervision of Benjamin Rosman. </p>
     "
   signature: "assets/img/signature.png"
   name: "CEO, John Doe"
@@ -566,34 +570,30 @@ about_one:
 
 ### Benefits Two [ benefits-two ]
 benefits_two:
-  title: "We Deliver Results"
+  title: "Skills"
   items:
-    - icon: "assets/img/make-ud-4.svg"
-      title: "Performance Marketing"
-      description: "Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis velnisi. Sed pretium, ligula sollicitudin."
+    - icon: "assets/img/deep-learning.png"
+      title: "Generative Modeling"
+      description: "Solid experience with various generative models (Diffusion, GAN, VAE, Transformers, ..etc) for different types of data (text/image/video)."
 
-    - icon: "assets/img/make-ud-5.svg"
-      title: "Creative Concepts & Ideas"
-      description: "In nisi neque, aliquet vel, dapibus id, mattisvel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget."
+    - icon: "assets/img/ai.png"
+      title: "Machine Learning"
+      description: "Solid experience with various machine learning and deep learning algorithms for different tasks."
 
-    - icon: "assets/img/make-ud-6.svg"
-      title: "Branding"
-      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna."
+    - icon: "assets/img/mlops.png"
+      title: "MLOps"
+      description: "Good experience with tensorflow extended (TFX) ecosystem for ML pipeline deployment."
 
-    - icon: "assets/img/make-ud-3.svg"
-      title: "Ecommerce"
-      description: "Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eunibh. Nullam mollis. Ut justo."
+    - icon: "assets/img/cloud.png"
+      title: "Cloud Computing"
+      description: "Good experience with Google Cloud Platform."
 
-    - icon: "assets/img/make-ud-7.svg"
-      title: "UX & UI Design & Analysis"
-      description: "Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis velnisi. Sed pretium, ligula sollicitudin laoreet viverra."
+    - icon: "assets/img/writing.png"
+      title: "Writing"
+      description: "Good experience with book and blog writings."
 
-    - icon: "assets/img/make-ud-8.svg"
-      title: "Digital Advertising"
-      description: "Dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh."
-
-  button: "More Services"
-  link: "/services/"
+  button: "Learn More"
+  link: "https://www.linkedin.com/in/khamiesw/"
 
 ### Awards [ awards ]
 awards:
@@ -614,10 +614,10 @@ awards:
 
 ### Testimonial Four [ testimonial-four ]
 testimonial_four:
-  title: "Satisfied Clients"
+  title: "Awards"
   subtitle: "Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis."
   items:
-    - title: "A multi-disciplinary team of creators ..."
+    - title: "Deep Learning Indaba Conference"
       text: "Suspendisse potenti. Sed egestas, ante etvulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue."
       name: "Milly Carson (Designer)"
     
@@ -1021,41 +1021,41 @@ faq:
 ### Contact Form Info [ contact-form-info ]
 contact_form_info:
   enable: true
-  title: "Let's Talk"
-  subtitle: "Start Your Project With Us."
+  title: "Contact"
+  subtitle: ""
   info:
-    - label: "Address :"
-      value: "418 Orange Street<br> Portsmouth, VA 23703"
-      type: "text"
+#    - label: "Address :"
+#      value: "418 Orange Street<br> Portsmouth, VA 23703"
+#      type: "text"
 
-    - label: "Phone :"
-      value: "0987 123 456 678"
-      type: "link"
-      link: "tel:0987123456678"
+#    - label: "Phone :"
+#      value: "0987 123 456 678"
+#      type: "link"
+#     link: "tel:0987123456678"
     
     - label: "Email :"
-      value: "contact@terio.com"
+      value: "waleed@waleedkhamies.com"
       type: "link"
-      link: "mailto:contact@terio.com"
+      link: "mailto:waleed@waleedkhamies.com"
 
-    - label: "Follow us :"
+    - label: "Follow Me:"
       value: ""
       type: "icons"
       icons:
-        - icon: "fa-brands fa-facebook-f"
-          link: "https://facebook.com/"
-          title: "Facebook"
+#       - icon: "fa-brands fa-facebook-f"
+#          link: "https://facebook.com/"
+#          title: "Facebook"
         
         - icon: "fa-brands fa-twitter"
-          link: "https://twitter.com/"
+          link: "https://twitter.com/khamiesw"
           title: "Twitter"
         
-        - icon: "fa-brands fa-instagram"
-          link: "https://instagram.com/"
-          title: "Instagram"
+#        - icon: "fa-brands fa-instagram"
+#          link: "https://instagram.com/"
+#          title: "Instagram"
 
         - icon: "fa-brands fa-linkedin-in"
-          link: "https://linkedin.com/"
+          link: "https://linktr.ee/khamiesw"
           title: "Linkedin"
 
 ### Map [ map ]

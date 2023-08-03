@@ -23,22 +23,22 @@ main:
   - title: "Books"
     url: "/books/"
     parent: 0
-
+    
+  - title: "Zitoona AI"
+    url: "https://khamiesw.substack.com"
+    parent: 0
+    
+  - title: "Research"
+    url: "/research/"
+    parent: 0
+   
   - title: "Projects"
     url: "/projects/"
     parent: 0
 
-  - title: "Services"
-    url: "/services/"
-    parent: 0
-
-  - title: "Blog"
-    url: "/blog/"
-    parent: 0
-
-  - title: "Zitoona AI"
-    url: "https://khamiesw.substack.com"
-    parent: 0
+#  - title: "Services"
+#   url: "/services/"
+#    parent: 0
 
   - title: "Store"
     url: "https://shop.waleedkhamies.com"

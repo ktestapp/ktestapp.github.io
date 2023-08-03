@@ -14,13 +14,13 @@
       <div class="col-xl-8">
         <div class="swiper-container studiesswiper">
           <div class="swiper-wrapper">
-            {% for work in site.works limit: content.numOfItems %}
+            {% for project in site.projects limit: content.numOfItems %}
             <div class="swiper-slide">
               <div class="case-studies-project">
-                <a href="{{ work.url }}" class="case-studies-project-img"><img alt="{{ work.title }}" src="{{ work.image | absolute_url }}"></a>
-                <h4>{{ work.title }}</h4>
-                <p>{{ work.short }}</p>
-                <a href="{{ work.url }}">{{ ui_text.view_project }}</a>
+                <a href="{{ project.url }}" class="case-studies-project-img"><img alt="{{ project.title }}" src="{{ project.image | absolute_url }}"></a>
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.short }}</p>
+                <a href="{{ project.url }}">{{ ui_text.view_project }}</a>
               </div>
             </div>
             {% endfor %}
