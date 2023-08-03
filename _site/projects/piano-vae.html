@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="author" content="bslthemes" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>PianoVAE: VAE For Piano Notes Generation | Waleed Khamies</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="PianoVAE: VAE For Piano Notes Generation" />
+<meta name="author" content="Admin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PianoVAE: VAE For Piano Notes Generation" />
+<meta property="og:description" content="PianoVAE: VAE For Piano Notes Generation" />
+<link rel="canonical" href="http://localhost:4000/projects/piano-vae" />
+<meta property="og:url" content="http://localhost:4000/projects/piano-vae" />
+<meta property="og:site_name" content="Waleed Khamies" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/paino_vae_cover.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-02T20:32:25-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/paino_vae_cover.png" />
+<meta property="twitter:title" content="PianoVAE: VAE For Piano Notes Generation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Admin"},"dateModified":"2023-08-02T20:32:25-06:00","datePublished":"2023-08-02T20:32:25-06:00","description":"PianoVAE: VAE For Piano Notes Generation","headline":"PianoVAE: VAE For Piano Notes Generation","image":"http://localhost:4000/assets/img/projects/paino_vae_cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/piano-vae"},"url":"http://localhost:4000/projects/piano-vae"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Fonts -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" type="text/css" media="all" />
+  
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="/assets/plugins/swiper/swiper.css" />
+  <link rel="stylesheet" href="/assets/plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="/assets/plugins/font-awesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Waleed Khamies" /></head>
+
+
+  <body class="page single-page"><!-- preloader start -->
+<div class="preloader"> 
+	<div>
+	<div class="container">
+	<div class="squarebox one"></div>
+	<div class="squarebox two"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox two"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox four"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox four"></div>
+	<div class="squarebox five"></div>
+	</div>
+	</div>
+</div>
+<!-- preloader end -->
+
+
+
+
+
+
+
+<header class="header three" style="background-image: url('http://localhost:4000/assets/img/header.jpg');">
+	<div class="container">
+		<div class="nav">
+			<div class="d-flex align-items-center">
+			<div class="logo">
+				<a href="http://localhost:4000" title="Waleed Khamies">
+				<img alt="logo" src="/assets/img/logo.png">
+				</a>
+			</div>
+			<ul class="menu">
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/books/">Books</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/projects/">Projects</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/services/">Services</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/blog/">Blog</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="https://shop.waleedkhamies.com">Store</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/news/">News</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/about/">About</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/contact/">Contact</a>
+					
+				</li>
+				
+			</ul>
+			</div>
+			<div>
+				<form id="searchForm" class="search-form" method="GET" action="/search.html">
+					<input type="text" class="input search-field" id="search-input" value="" />
+					<button type="reset" class="search" id="search-btn"></button>
+					<ul id="results-container"></ul>
+				</form>
+				<a href="/contact/" class="themebtu">Contact</a>
+			</div>
+			<div class="bar-menu">
+			<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+		<div class="res-log">
+			<a href="http://localhost:4000" title="Waleed Khamies">
+			<img src="http://localhost:4000/assets/img/logo.png" alt="logo">
+			</a>
+		</div>
+		<ul>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/books/">Books</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/projects/">Projects</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/services/">Services</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/blog/">Blog</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="https://shop.waleedkhamies.com">Store</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/news/">News</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/about/">About</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/contact/">Contact</a>
+				
+			</li>
+			
+		</ul>
+		<a href="JavaScript:void(0)" id="res-cross"></a>
+	</div>
+</header>
+<!-- Wrapper -->
+    <div class="wrapper portfolio-template">
+      
+
+
+
+
+
+<section class="gap no-top">
+	<div class="container">
+	  <div class="title-blog">
+		<h2>PianoVAE: VAE For Piano Notes Generation</h2>
+		<span>Generative Modeling</span>
+	  </div>
+	  <div class="row">
+		<div class="col-xl-8">
+		  <div class="blog-item hoverstyle">
+			
+			<figure>
+			  <img alt="img" class="w-100" src="http://localhost:4000/assets/img/projects/paino_vae_cover.png">
+			</figure>
+			
+			
+			<div class="post-content">
+				<h2 id="pianovae-vae-for-piano-notes-generation">PianoVAE: VAE For Piano Notes Generation</h2>
+
+<p>A Pytorch Implementation of VAE-based musical model to generate and interpolate piano’notes using Nottingham dataset.</p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<ul>
+  <li><strong><a href="#Introduction">Introduction</a></strong></li>
+  <li><a href="#Nottingham'-Dataset"><strong>Nottingham’ Dataset</strong></a></li>
+  <li><strong><a href="#Setup">Setup</a></strong></li>
+  <li><a href="#Run-the-code"><strong>Run the code</strong></a></li>
+  <li><strong><a href="#Training">Training</a></strong></li>
+  <li><strong><a href="#Inference">Inference</a></strong></li>
+  <li><strong><a href="#Play-with-the-model">Play with the model</a></strong></li>
+  <li><strong><a href="#Acknowledgement">Acknowledgement</a></strong></li>
+  <li><strong><a href="#Connect-with-me">Connect with me</a></strong></li>
+  <li><strong><a href="#License">License</a></strong></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This is a Pytorch implementation of a musical model that capable to generate piano’notes and interpolate between them as the model latent space is continuous. The model is a variational autoencoder where the encoder and the decoder are LSTM networks. The model is trained on Nottingham dataset, you can download it from <a href="http://www-ens.iro.umontreal.ca/~boulanni/icml2012">here</a>.</p>
+
+<p><img src="/assets/img/projects/piano-VAE.svg" alt="" /></p>
+
+<h3 id="nottingham-dataset">Nottingham’ Dataset</h3>
+
+<p>The <a href="http://abc.sourceforge.net/NMD/">Nottingham Music Database</a>  contains over 1000 Folk Tunes stored in a special text format. The dataset has been converted to a piano-roll format to be easily processed and visualised. Here is a sample from the dataset that you can listen to:</p>
+
+<p align="center">
+ <a href="https://www.youtube.com/watch?v=fPu3hMfQC-A">  <img src="http://img.youtube.com/vi/fPu3hMfQC-A/0.jpg?raw=true" alt="Sublime's custom image" /> </a>
+</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>The code is using <code class="language-plaintext highlighter-rouge">pipenv</code> as a virtual environment and package manager. To run the code, all you need is to install the necessary dependencies. open the terminal and type:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git clone https://github.com/Khamies/Piano-VAE.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cd Piano-VAE</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pipenv install</code></li>
+</ul>
+
+<p>And you should be ready to go to play with code and build upon it!</p>
+
+<h3 id="run-the-code">Run the code</h3>
+
+<ul>
+  <li>To train the model, run: <code class="language-plaintext highlighter-rouge">python main.py</code></li>
+  <li>To train the model with specific arguments, run: <code class="language-plaintext highlighter-rouge">python main.py --batch_size=64</code>. The following command-line arguments are available:
+    <ul>
+      <li>Batch size: <code class="language-plaintext highlighter-rouge">--batch_size</code></li>
+      <li>Learning rate: <code class="language-plaintext highlighter-rouge">--lr</code></li>
+      <li>Embedding size: <code class="language-plaintext highlighter-rouge">--embed_size</code></li>
+      <li>Hidden size: <code class="language-plaintext highlighter-rouge">--hidden_size</code></li>
+      <li>Latent size: <code class="language-plaintext highlighter-rouge">--latent_size</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="training">Training</h3>
+
+<p>The model is trained on 20 epochs using Adam as an optimizer with a learning rate 0.001. Here are the results from training the LSTM-VAE model:</p>
+
+<ul>
+  <li>
+    <p><strong>KL Loss</strong></p>
+
+    <p><img src="/assets/img/projects/piano_vae_KL.jpg" align="center" height="300" width="500" /></p>
+  </li>
+  <li>
+    <p><strong>Reconstruction loss</strong></p>
+
+    <p><img src="/assets/img/projects/piano_vae_reco.jpg" align="center" height="300" width="500" /></p>
+  </li>
+  <li>
+    <p><strong>KL loss vs Reconstruction loss</strong></p>
+
+    <p><img src="/assets/img/projects/piano_vae_kl_reco.jpg" align="center" height="300" width="500" /></p>
+  </li>
+  <li>
+    <p><strong>ELBO loss</strong></p>
+
+    <p><img src="/assets/img/projects/piano_vae_elbo.jpg" align="center" height="300" width="500" /></p>
+  </li>
+</ul>
+
+<h3 id="inference">Inference</h3>
+
+<h4 id="1-sample-generation">1. Sample Generation</h4>
+
+<p>Here are generated samples from the model. We randomly sampled two latent codes z from standard Gaussian distribution. The following are the generated notes:</p>
+
+<p align="center">
+ <a href="https://www.youtube.com/watch?v=fPu3hMfQC-A">  <img src="http://img.youtube.com/vi/fPu3hMfQC-A/0.jpg?raw=true" alt="Sublime's custom image" /> </a>
+</p>
+
+<h4 id="2-interpolation">2. Interpolation</h4>
+
+<p>Here are some samples from the interpolation test. We use number of interpolation = 32, and sequence length = 200.</p>
+
+<ul>
+  <li>
+    <p>First audio:</p>
+
+    <p align="center">
+ <a href="https://youtu.be/W3BkL7wv2Zo">  <img src="http://img.youtube.com/vi/W3BkL7wv2Zo/0.jpg?raw=true" alt="First audio" /> </a>
+</p>
+  </li>
+  <li>
+    <p>Second audio:</p>
+
+    <p align="center">
+ <a href="https://youtu.be/bJidY5IIzrc">  <img src="http://img.youtube.com/vi/bJidY5IIzrc/0.jpg?raw=true" alt="Second audio" /> </a>
+</p>
+  </li>
+</ul>
+
+<p>An interpolation close to “first audio”</p>
+
+<p align="center">
+ <a href="https://youtu.be/TxQvKnBAzbk">  <img src="http://img.youtube.com/vi/TxQvKnBAzbk/0.jpg?raw=true" alt="Second audio" /> </a>
+</p>
+
+<p>An interpolation close to “second audio”</p>
+
+<p align="center">
+ <a href="https://youtu.be/BPNVYV5csrE">  <img src="http://img.youtube.com/vi/BPNVYV5csrE/0.jpg?raw=true" alt="Second audio" /> </a>
+</p>
+
+<h3 id="play-with-the-model">Play with the model</h3>
+
+<p>To play with the model, a jupyter notebook has been provided, you can find it <a href="https://github.com/Khamies/Piano-VAE/blob/main/Play_with_model.ipynb">here</a></p>
+
+<h3 id="acknowledgement">Acknowledgement</h3>
+
+<ul>
+  <li>Big thanks to @montaserFath for reviewing the code!</li>
+</ul>
+
+<h3 id="citation">Citation</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{Khamies2021Piano-VAE,
+author = {Khamies, Waleed},
+title = {A Pytorch Implementation of VAE-based musical model to generate and interpolate piano'notes using Nottingham dataset.},
+year = {2021},
+publisher = {GitHub},
+journal = {GitHub repository},
+howpublished = {\url{https://github.com/Khamies/Piano-VAE}},
+}
+</code></pre></div></div>
+
+<h3 id="license">License</h3>
+
+<p><img src="https://img.shields.io/github/license/khamies/Piano-VAE" alt="" /></p>
+
+
+			</div>
+			
+			<div class="row align-items-center post-gallery">
+				
+			</div>
+
+			
+			
+
+		  </div>
+		  </div>
+		  <div class="col-xl-4 pl-60">
+		  
+		  <ul class="sidebar">
+			
+			<li>
+			  <h4>Project Description : </h4>
+			  <span>This is a Pytorch implementation of a musical model that capable to generate piano'notes and interpolate between them as the model latent space is continuous. The model is a variational autoencoder where the encoder and the decoder are LSTM networks.</span>
+			</li>
+			
+			<li>
+			  <h4>Tags : </h4>
+			  <span>pytorch, lstm, vae, piano-roll, music-generation-deep-learning</span>
+			</li>
+			
+			<li>
+			  <h4>Year : </h4>
+			  <span>2021</span>
+			</li>
+			
+			<li>
+			  <h4>Category :</h4>
+			  <span>Generative Modeling</span>
+			</li>
+			<li>
+			  <h4>Share :</h4>
+			  <ul class="brandicon">
+				<li><a href="#" class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-reddit share-btn-3" title="Share on Reddit"><i class="fa-brands fa-reddit"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-pinterest share-btn-4" title="Share on Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-linkedin share-btn-5" title="Share on Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+			  </ul>
+			</li>
+			<li>
+			  <a href="https://github.com/Khamies/Piano-VAE" class="themebtu">Access</a>
+			</li>
+		  </ul>
+		</div>
+		</div>
+		
+	  </div>
+  </section>
+
+  
+  <div class="next-previous-page">
+	<div class="container">
+	  <div class="next-previous">
+		
+		
+		<div class="next">
+		  <a href="/projects/pros" title="Transfer Learning for Prosthetics Using Imitation Learning">Next Project
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		  </a>
+		</div>
+		
+	  </div>
+	</div>
+  </div>
+  
+    </div>
+
+    <!-- Footer -->
+
+
+
+
+<!-- Footer -->
+<footer class="footer gap no-bottom" style="background-color: #222 ;">
+	<div class="container">
+	  <div class="row">
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="footer-logo">
+			<a href="http://localhost:4000" title="Waleed Khamies"><img alt="logo" src="http://localhost:4000/assets/img/logo.png"></a>
+			<p>
+			  Applied ML Scientist
+			</p>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="links">
+			<h6>Additional Links</h6>
+			<ul>
+        	  
+			  <li><a href="http://localhost:4000/about/">About Us</a></li>
+			  
+			  <li><a href="http://localhost:4000/services/">Services</a></li>
+			  
+			  <li><a href="http://localhost:4000/team/">Team</a></li>
+			  
+			  <li><a href="http://localhost:4000/blog/">News</a></li>
+			  
+			  <li><a href="http://localhost:4000/contact/">Contact Us</a></li>
+			  
+			</ul>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  
+		  <div class="latest-news">
+			<h6>Latest News</h6>
+			<ul>
+			  
+			  <li class="pt-4">
+				  <p><a href="/documentation/2021/07/13/designer-conference-at-florida-2020/">Designer Conference at Florida 2020</a></p>
+				  <span>13 July 2021</span>
+			  </li>
+			  
+			  <li class="pt-4">
+				  <p><a href="/design/2021/07/13/you-must-know-this-before-becoming-a-designer/">You must know this before becoming a designer</a></p>
+				  <span>13 July 2021</span>
+			  </li>
+			  
+			</ul>
+		  </div>
+		  
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="latest-news">
+			<h6>Subscribe</h6>
+			<p>Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.</p>
+			<form class="subscribe-form" action="" method="post" target="_blank">
+				<input type="text" name="EMAIL" placeholder="your email address">
+				<input type="hidden" name="">
+				<button type="submit">Go</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	  <div class="footer-bottom">
+		<p>&copy; 2023 Waleed Khamies - All Rights Reserved | Developed by <a href="https://bslthemes.com" target="_blank">bslthemes</a></p>
+		<ul>
+      	  
+		  <li><a href="https://twitter.com/khamiesw" target="_blank" title="Twitter"><i aria-hidden="true" class="fa-brands fa-twitter"></i></a></li>
+		  
+		  <li><a href="https://www.medium.com/@khamiesw" target="_blank" title="Medium"><i aria-hidden="true" class="fa-solid fa-m"></i></a></li>
+		  
+		  <li><a href="https://www.linkedin.com/in/khamiesw/" target="_blank" title="Linkedin"><i aria-hidden="true" class="fa-brands fa-linkedin-in"></i></a></li>
+		  
+		</ul>
+	  </div>
+	</div>
+</footer>
+<!-- Back to Top -->
+    <a href="#." id="button"></a>
+
+    <!-- Scripts --><!-- Plugins -->
+<script src="/assets/plugins/jQuery/jquery.min.js"></script>
+<script src="/assets/plugins/bootstrap/bootstrap.js"></script>
+<script src="/assets/plugins/validate/jquery.validate.min.js"></script>
+<script src="/assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="/assets/plugins/imagesloaded/imagesloaded.pkgd.js"></script>
+<script src="/assets/plugins/isotope/isotope.pkgd.js"></script>
+<script src="/assets/plugins/isotope/isotope-init.js"></script>
+<script src="/assets/plugins/swiper/swiper.js"></script>
+<script src="/assets/plugins/rrssb/rrssb.js"></script>
+<script src="/assets/js/simple-jekyll-search.js"></script>
+<script src="/assets/js/form-handler.js"></script>
+
+<!-- Main -->
+<script src="/assets/js/common.js"></script>
+</body>
+
+</html>

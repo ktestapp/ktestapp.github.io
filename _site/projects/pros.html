@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="author" content="bslthemes" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Transfer Learning for Prosthetics Using Imitation Learning | Waleed Khamies</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Transfer Learning for Prosthetics Using Imitation Learning" />
+<meta name="author" content="Admin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Transfer Learning for Prosthetics Using Imitation Learning" />
+<meta property="og:description" content="Transfer Learning for Prosthetics Using Imitation Learning" />
+<link rel="canonical" href="http://localhost:4000/projects/pros" />
+<meta property="og:url" content="http://localhost:4000/projects/pros" />
+<meta property="og:site_name" content="Waleed Khamies" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/pros_cover.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-02T20:32:25-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/pros_cover.png" />
+<meta property="twitter:title" content="Transfer Learning for Prosthetics Using Imitation Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Admin"},"dateModified":"2023-08-02T20:32:25-06:00","datePublished":"2023-08-02T20:32:25-06:00","description":"Transfer Learning for Prosthetics Using Imitation Learning","headline":"Transfer Learning for Prosthetics Using Imitation Learning","image":"http://localhost:4000/assets/img/projects/pros_cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/pros"},"url":"http://localhost:4000/projects/pros"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Fonts -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" type="text/css" media="all" />
+  
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="/assets/plugins/swiper/swiper.css" />
+  <link rel="stylesheet" href="/assets/plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="/assets/plugins/font-awesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Waleed Khamies" /></head>
+
+
+  <body class="page single-page"><!-- preloader start -->
+<div class="preloader"> 
+	<div>
+	<div class="container">
+	<div class="squarebox one"></div>
+	<div class="squarebox two"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox two"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox four"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox four"></div>
+	<div class="squarebox five"></div>
+	</div>
+	</div>
+</div>
+<!-- preloader end -->
+
+
+
+
+
+
+
+<header class="header three" style="background-image: url('http://localhost:4000/assets/img/header.jpg');">
+	<div class="container">
+		<div class="nav">
+			<div class="d-flex align-items-center">
+			<div class="logo">
+				<a href="http://localhost:4000" title="Waleed Khamies">
+				<img alt="logo" src="/assets/img/logo.png">
+				</a>
+			</div>
+			<ul class="menu">
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/books/">Books</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/projects/">Projects</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/services/">Services</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/blog/">Blog</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="https://shop.waleedkhamies.com">Store</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/news/">News</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/about/">About</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/contact/">Contact</a>
+					
+				</li>
+				
+			</ul>
+			</div>
+			<div>
+				<form id="searchForm" class="search-form" method="GET" action="/search.html">
+					<input type="text" class="input search-field" id="search-input" value="" />
+					<button type="reset" class="search" id="search-btn"></button>
+					<ul id="results-container"></ul>
+				</form>
+				<a href="/contact/" class="themebtu">Contact</a>
+			</div>
+			<div class="bar-menu">
+			<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+		<div class="res-log">
+			<a href="http://localhost:4000" title="Waleed Khamies">
+			<img src="http://localhost:4000/assets/img/logo.png" alt="logo">
+			</a>
+		</div>
+		<ul>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/books/">Books</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/projects/">Projects</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/services/">Services</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/blog/">Blog</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="https://shop.waleedkhamies.com">Store</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/news/">News</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/about/">About</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/contact/">Contact</a>
+				
+			</li>
+			
+		</ul>
+		<a href="JavaScript:void(0)" id="res-cross"></a>
+	</div>
+</header>
+<!-- Wrapper -->
+    <div class="wrapper portfolio-template">
+      
+
+
+
+
+
+<section class="gap no-top">
+	<div class="container">
+	  <div class="title-blog">
+		<h2>Transfer Learning for Prosthetics Using Imitation Learning</h2>
+		<span>Reinforcement Learning (RL)</span>
+	  </div>
+	  <div class="row">
+		<div class="col-xl-8">
+		  <div class="blog-item hoverstyle">
+			
+			<figure>
+			  <img alt="img" class="w-100" src="http://localhost:4000/assets/img/projects/pros_cover.png">
+			</figure>
+			
+			
+			<div class="post-content">
+				<h2 id="transfer-learning-for-prosthetics-using-imitation-learning">Transfer Learning for Prosthetics Using Imitation Learning</h2>
+
+<p>This project tries to apply Reinforcement Learning (RL) to enable prosthetics to calibrate with differences between humans and differences between walking environments using <a href="https://opensim.stanford.edu/">OpenSim</a> simulator to mimic the prosthetic motions and apperance.The project is a part from <a href="https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge">NeurIPS 2018: AI for Prosthetics Challenge</a></p>
+
+<p><a href="https://github.com/stanfordnmbl/osim-rl"><img src="https://s3-eu-west-1.amazonaws.com/kidzinski/nips-challenge/images/ai-prosthetics.jpg" alt="AI for prosthetics" /></a></p>
+
+<h1 id="codes">Codes</h1>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics/blob/master/PPO/PPO_Prosthetic.ipynb">PPO Code</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics/blob/master/TRPO/TRPO_prosthetics.ipynb">TRPO Code</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics/blob/master/RL/DDPG/DDPG_Prosthetic.ipynb">DDPG Code</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics/tree/master/Imitation%20Learning/DDPG">Imitation Learning Code</a></p>
+  </li>
+</ul>
+
+<h1 id="publications-and-awards">Publications and Awards</h1>
+
+<ul>
+  <li>
+    <p>Best Graduation project at <a href="uofk.edu">University of khartoum</a>. 2018. Khartoum, Sudan</p>
+  </li>
+  <li>
+    <p>Poster <a href="https://arxiv.org/abs/1901.04772v1">paper</a> at NeurIPS 2018 <a href="https://blackinai.github.io/workshop/2018/programs/">Black in AI workshop</a>, Montreal, Canada</p>
+  </li>
+  <li>Poster at <a href="http://www.deeplearningindaba.com">Deep Learning Indaba</a> 2018, South Africa
+    <h2 id="objectives">Objectives</h2>
+  </li>
+  <li>
+    <p><strong>Benchmarking RL algorithms:</strong> Deterministic Policy Gradient <a href="https://arxiv.org/abs/1509.02971">DDPG</a>, Trust Region Policy Optimization <a href="http://proceedings.mlr.press/v37/schulman15.pdf">TRPO</a> and Proximal Policy Optimization <a href="https://arxiv.org/abs/1707.06347">PPO</a> algorithms.</p>
+  </li>
+  <li>
+    <p><strong>Reduce training time</strong> using Imitation Learning algorithm Dataset Aggregation algorithm <a href="http://proceedings.mlr.press/v15/ross11a/ross11a.pdf">DAgger</a>.</p>
+  </li>
+  <li><strong>Modificat DAgger algorithm</strong> to balance between exploration and exploiting.</li>
+</ul>
+
+<h2 id="opensim-enviroment">OpenSim Enviroment</h2>
+<p><a href="https://opensim.stanford.edu/">OpenSim</a> models one human leg and prosthetic in another leg.</p>
+
+<h3 id="observations">Observations</h3>
+<p>the <a href="http://osim-rl.stanford.edu/docs/nips2018/observation/">observations</a> can be divided into five components:</p>
+
+<ul>
+  <li>
+    <p><strong>Body parts:</strong> the agent observes its position, velocity, acceleration, rotation, rotational velocity, and rotational acceleration.</p>
+  </li>
+  <li>
+    <p><strong>Joints:</strong> the agent observes its position, velocity and acceleration.</p>
+  </li>
+  <li>
+    <p><strong>Muscles:</strong> the agent observes its activation, fiber force, fiber length and fiber velocity.</p>
+  </li>
+  <li>
+    <p><strong>Forces:</strong> describes the forces acting on body parts.</p>
+  </li>
+  <li>
+    <p><strong>Center of mass:</strong> the agent observes the position, velocity, and acceleration.</p>
+  </li>
+</ul>
+
+<h3 id="actions">Actions</h3>
+
+<ul>
+  <li>
+    <p>Muscles activation, lenght and velocity</p>
+  </li>
+  <li>
+    <p>Joints angels.</p>
+  </li>
+  <li>
+    <p>Tendons.</p>
+  </li>
+</ul>
+
+<h3 id="reward">Reward</h3>
+
+<p><strong><img src="https://latex.codecogs.com/gif.latex?R_{t}=9-(3-V_{t})^2" /></strong></p>
+
+<p>Where the <img src="https://latex.codecogs.com/gif.latex?V_{t}" /> is the horizontal velocity vector of the pelvi which is function of all state variables.</p>
+
+<p>The termination condition for the episode is filling 300 steps or the height of the pelvis falling below 0.6 meters</p>
+<h2 id="algorithms-and-hyperparameters">Algorithms and Hyperparameters</h2>
+
+<ul>
+  <li>
+    <p><strong><a href="https://arxiv.org/abs/1509.02971">DDPG</a></strong> is a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action spaces.DDPG is based on the deterministic policy gradient (DPG) algorithm. it combines the actor-critic approach with insights from the recent success of Deep Q Network (DQN).</p>
+  </li>
+  <li>
+    <p><strong><a href="https://arxiv.org/abs/1707.06347">PPO</a></strong> is a policy optimization method that use multiple epochs of stochastic gradient ascent to perform each policy update.</p>
+  </li>
+  <li>
+    <p><strong><a href="http://proceedings.mlr.press/v37/schulman15.pdf">TRPO</a></strong> is a model free, on-policy optimization method that effective for optimizing large nonlinear policies such as neural networks.</p>
+  </li>
+</ul>
+
+<h2 id="results">Results</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center"><strong>TRPO</strong></th>
+      <th style="text-align: center"><strong>PPO</strong></th>
+      <th style="text-align: center"><strong>DDPG</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>Mean Reward</strong></td>
+      <td style="text-align: center"><strong>43</strong></td>
+      <td style="text-align: center">-58</td>
+      <td style="text-align: center">-42</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Maximum Reward</strong></td>
+      <td style="text-align: center"><strong>194</strong></td>
+      <td style="text-align: center">70</td>
+      <td style="text-align: center">113</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://github.com/montaserFath/NeurIPS2018-Challenge-RL-for-Prosthetics/blob/master/pro_mean.png" alt="Results" /></p>
+
+<h2 id="demo">Demo</h2>
+<ul>
+  <li><strong>Random Actions</strong></li>
+</ul>
+
+<p><img src="https://github.com/montaserFath/NeurIPS2018-Challenge-RL-for-Prosthetics/blob/master/Demos/Random_prothetics.gif" alt="Random" /></p>
+
+<ul>
+  <li><strong><a href="http://proceedings.mlr.press/v37/schulman15.pdf">TRPO</a></strong></li>
+</ul>
+
+<p><img src="https://github.com/montaserFath/NeurIPS2018-Challenge-RL-for-Prosthetics/blob/master/Demos/TRPO_prothetics.gif" alt="TRPO" /></p>
+
+<ul>
+  <li><strong><a href="https://arxiv.org/abs/1707.06347">PPO</a></strong></li>
+</ul>
+
+<p><img src="https://github.com/montaserFath/NeurIPS2018-Challenge-RL-for-Prosthetics/blob/master/Demos/PPO_prothetics.gif" alt="PPO" /></p>
+
+<ul>
+  <li><strong><a href="https://arxiv.org/abs/1509.02971">DDPG</a></strong></li>
+</ul>
+
+<p><img src="https://github.com/montaserFath/NeurIPS2018-Challenge-RL-for-Prosthetics/blob/master/Demos/DDPG_prothetics.gif" alt="DDPG" /></p>
+<h2 id="discussion">Discussion</h2>
+
+<ul>
+  <li>
+    <p>OpenSim <a href="http://osim-rl.stanford.edu">ProstheticsEnv</a> is a very <strong>complex environment</strong>, it contains more than 158 continuous state variables and 19 continuous action variables.</p>
+  </li>
+  <li>
+    <p>RL algorithms take a <strong>long time</strong> to build a complex policy which has the ability to compute all state variables and select action variables which will maximize the reward.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://arxiv.org/abs/1509.02971">DDPG</a> algorithm achieves good</strong> reward because it designed for high dimensions continuous space environments and it uses the replay buffer.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://arxiv.org/abs/1707.06347">PPO</a> the least training time</strong> comparing to <a href="https://arxiv.org/abs/1509.02971">DDPG</a> and <a href="http://proceedings.mlr.press/v37/schulman15.pdf">TRPO</a> because <a href="https://arxiv.org/abs/1707.06347">PPO</a> uses gradient algorithm approximation instance of the conjugate gradient algorithm.</p>
+  </li>
+  <li>
+    <p><strong><a href="http://proceedings.mlr.press/v37/schulman15.pdf">TRPO</a> algorithm achieved the maximum Reward</strong> because it takes time to reach the “trusted” region so it slower than <a href="https://arxiv.org/abs/1509.02971">DDPG</a> and <a href="https://arxiv.org/abs/1707.06347">PPO</a> .</p>
+  </li>
+</ul>
+
+<h2 id="limitations">Limitations</h2>
+
+<ul>
+  <li>
+    <p>The prosthetic model <strong>can not walk for large distances</strong>.</p>
+  </li>
+  <li>
+    <p>Each experiment <strong>runs for one time</strong>, So we are planing to Repeat each experiment number of times with different random seeds and take the average and variance.</p>
+  </li>
+  <li>
+    <p>We used <strong>same hyperparameters</strong> for all algorithm to make benchmarking between algorithms, we need to select the best hyperparameters for each algorithm and environment.</p>
+  </li>
+  <li>
+    <p>We benchmarcked three RL algorithms only and from <strong>one library</strong>(<a href="https://github.com/chainer/chainerrl">ChainerRL</a>). So we are planing to use different implementations.</p>
+  </li>
+  <li>
+    <p>We transfer learning between <strong>similar agents</strong>.</p>
+  </li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="chainerrl-libary">ChainerRL libary</h3>
+<ul>
+  <li>
+    <p><a href="https://github.com/chainer/chainerrl">ChainerRL</a> is a deep reinforcement learning library that implements various state-of-the-art deep reinforcement algorithms in Python using Chainer, a flexible deep learning framework.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/chainer/chainerrl">ChainerRL</a>  contains DQN, DDPG, TRPO, PPO, etc Reinforcment Learning algorithms.</p>
+  </li>
+</ul>
+
+<h3 id="environment">Environment</h3>
+<p>To model physics and biomechanics we use <a href="https://github.com/opensim-org/opensim-core">OpenSim</a> - a biomechanical physics environment for musculoskeletal simulations.</p>
+
+<h3 id="installing">Installing</h3>
+<p>Install OpenSim Envirnment</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create -n opensim-rl -c kidzik opensim python=3.6.1
+source activate opensim-rl
+</code></pre></div></div>
+<p>Install ChainerRL libary</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install chainerrl
+</code></pre></div></div>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>
+    <p>T. Garikayi, D. van den Heever and S. Matope, (2016), Robotic prosthetic challenges for clinical applications, IEEE International Conference on Control and Robotics Engineering (ICCRE), Singapore, 2016, pp. 1-5. doi: 10.1109/ICCRE.2016.7476146</p>
+  </li>
+  <li>
+    <p>Joshi, Girish \&amp; Chowdhary, Girish. (2018). Cross-Domain Transfer in Reinforcement Learning using Target Apprentice.</p>
+  </li>
+  <li>
+    <p>Lillicrap, Timothy \&amp; J. Hunt, Jonathan \&amp; Pritzel, Alexander \&amp; Heess, Nicolas \&amp; Erez, Tom \&amp; Tassa, Yuval \&amp; Silver, David \&amp; Wierstra, Daan. (2015). Continuous control with deep reinforcement learning. CoRR.</p>
+  </li>
+  <li>
+    <p>Attia, Alexandre \&amp; Dayan, Sharone. (2018). Global overview of Imitation Learning.</p>
+  </li>
+  <li>Cheng, Qiao \&amp; Wang, Xiangke \&amp; Shen, Lincheng. (2017). An Autonomous Inter-task Mapping Learning Method via Artificial Neural Network for Transfer Learning. 10.1109/ROBIO.2017.8324510.</li>
+  <li>J.J. Zhu, DAgger algorithm implementation, (2017), GitHub repository, https://github.com/jj-zhu/jadagger.</li>
+</ul>
+
+
+			</div>
+			
+			<div class="row align-items-center post-gallery">
+				
+			</div>
+
+			
+			
+
+		  </div>
+		  </div>
+		  <div class="col-xl-4 pl-60">
+		  
+		  <ul class="sidebar">
+			
+			<li>
+			  <h4>Project Description : </h4>
+			  <span>This project tries to apply Reinforcement Learning (RL) to enable prosthetics to calibrate with differences between humans and differences between walking environments using OpenSim simulator to mimic the prosthetic motions and apperance.</span>
+			</li>
+			
+			<li>
+			  <h4>Client : </h4>
+			  <span>Envato</span>
+			</li>
+			
+			<li>
+			  <h4>Year : </h4>
+			  <span>2018</span>
+			</li>
+			
+			<li>
+			  <h4>Category :</h4>
+			  <span>Reinforcement Learning (RL)</span>
+			</li>
+			<li>
+			  <h4>Share :</h4>
+			  <ul class="brandicon">
+				<li><a href="#" class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-reddit share-btn-3" title="Share on Reddit"><i class="fa-brands fa-reddit"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-pinterest share-btn-4" title="Share on Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-linkedin share-btn-5" title="Share on Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+			  </ul>
+			</li>
+			<li>
+			  <a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics" class="themebtu">Access</a>
+			</li>
+		  </ul>
+		</div>
+		</div>
+		
+	  </div>
+  </section>
+
+  
+  <div class="next-previous-page">
+	<div class="container">
+	  <div class="next-previous">
+		
+		
+		<div class="next">
+		  <a href="/projects/t5" title="T5WikiX: T5 Fine-Tuning on Wikihow and XSum">Next Project
+		  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+		  <polygon points="405.606,167.5 384.394,188.713 418.787,223.106 0,223.106 0,253.106 418.787,253.106 384.394,287.5 
+			405.606,308.713 476.213,238.106 "/>
+		  </svg>
+		  </a>
+		</div>
+		
+	  </div>
+	</div>
+  </div>
+  
+    </div>
+
+    <!-- Footer -->
+
+
+
+
+<!-- Footer -->
+<footer class="footer gap no-bottom" style="background-color: #222 ;">
+	<div class="container">
+	  <div class="row">
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="footer-logo">
+			<a href="http://localhost:4000" title="Waleed Khamies"><img alt="logo" src="http://localhost:4000/assets/img/logo.png"></a>
+			<p>
+			  Applied ML Scientist
+			</p>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="links">
+			<h6>Additional Links</h6>
+			<ul>
+        	  
+			  <li><a href="http://localhost:4000/about/">About Us</a></li>
+			  
+			  <li><a href="http://localhost:4000/services/">Services</a></li>
+			  
+			  <li><a href="http://localhost:4000/team/">Team</a></li>
+			  
+			  <li><a href="http://localhost:4000/blog/">News</a></li>
+			  
+			  <li><a href="http://localhost:4000/contact/">Contact Us</a></li>
+			  
+			</ul>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  
+		  <div class="latest-news">
+			<h6>Latest News</h6>
+			<ul>
+			  
+			  <li class="pt-4">
+				  <p><a href="/documentation/2021/07/13/designer-conference-at-florida-2020/">Designer Conference at Florida 2020</a></p>
+				  <span>13 July 2021</span>
+			  </li>
+			  
+			  <li class="pt-4">
+				  <p><a href="/design/2021/07/13/you-must-know-this-before-becoming-a-designer/">You must know this before becoming a designer</a></p>
+				  <span>13 July 2021</span>
+			  </li>
+			  
+			</ul>
+		  </div>
+		  
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="latest-news">
+			<h6>Subscribe</h6>
+			<p>Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.</p>
+			<form class="subscribe-form" action="" method="post" target="_blank">
+				<input type="text" name="EMAIL" placeholder="your email address">
+				<input type="hidden" name="">
+				<button type="submit">Go</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	  <div class="footer-bottom">
+		<p>&copy; 2023 Waleed Khamies - All Rights Reserved | Developed by <a href="https://bslthemes.com" target="_blank">bslthemes</a></p>
+		<ul>
+      	  
+		  <li><a href="https://twitter.com/khamiesw" target="_blank" title="Twitter"><i aria-hidden="true" class="fa-brands fa-twitter"></i></a></li>
+		  
+		  <li><a href="https://www.medium.com/@khamiesw" target="_blank" title="Medium"><i aria-hidden="true" class="fa-solid fa-m"></i></a></li>
+		  
+		  <li><a href="https://www.linkedin.com/in/khamiesw/" target="_blank" title="Linkedin"><i aria-hidden="true" class="fa-brands fa-linkedin-in"></i></a></li>
+		  
+		</ul>
+	  </div>
+	</div>
+</footer>
+<!-- Back to Top -->
+    <a href="#." id="button"></a>
+
+    <!-- Scripts --><!-- Plugins -->
+<script src="/assets/plugins/jQuery/jquery.min.js"></script>
+<script src="/assets/plugins/bootstrap/bootstrap.js"></script>
+<script src="/assets/plugins/validate/jquery.validate.min.js"></script>
+<script src="/assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="/assets/plugins/imagesloaded/imagesloaded.pkgd.js"></script>
+<script src="/assets/plugins/isotope/isotope.pkgd.js"></script>
+<script src="/assets/plugins/isotope/isotope-init.js"></script>
+<script src="/assets/plugins/swiper/swiper.js"></script>
+<script src="/assets/plugins/rrssb/rrssb.js"></script>
+<script src="/assets/js/simple-jekyll-search.js"></script>
+<script src="/assets/js/form-handler.js"></script>
+
+<!-- Main -->
+<script src="/assets/js/common.js"></script>
+</body>
+
+</html>

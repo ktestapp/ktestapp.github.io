@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="author" content="bslthemes" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>T5WikiX: T5 Fine-Tuning on Wikihow and XSum | Waleed Khamies</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="T5WikiX: T5 Fine-Tuning on Wikihow and XSum" />
+<meta name="author" content="Admin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="T5WikiX: T5 Fine-tuning on Wikihow and XSum." />
+<meta property="og:description" content="T5WikiX: T5 Fine-tuning on Wikihow and XSum." />
+<link rel="canonical" href="http://localhost:4000/projects/t5" />
+<meta property="og:url" content="http://localhost:4000/projects/t5" />
+<meta property="og:site_name" content="Waleed Khamies" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/t5_cover.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-02T20:32:25-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/t5_cover.png" />
+<meta property="twitter:title" content="T5WikiX: T5 Fine-Tuning on Wikihow and XSum" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Admin"},"dateModified":"2023-08-02T20:32:25-06:00","datePublished":"2023-08-02T20:32:25-06:00","description":"T5WikiX: T5 Fine-tuning on Wikihow and XSum.","headline":"T5WikiX: T5 Fine-Tuning on Wikihow and XSum","image":"http://localhost:4000/assets/img/projects/t5_cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/t5"},"url":"http://localhost:4000/projects/t5"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Fonts -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" type="text/css" media="all" />
+  
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="/assets/plugins/swiper/swiper.css" />
+  <link rel="stylesheet" href="/assets/plugins/fancybox/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="/assets/plugins/font-awesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Waleed Khamies" /></head>
+
+
+  <body class="page single-page"><!-- preloader start -->
+<div class="preloader"> 
+	<div>
+	<div class="container">
+	<div class="squarebox one"></div>
+	<div class="squarebox two"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox two"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox four"></div>
+	<div class="squarebox three"></div>
+	<div class="squarebox four"></div>
+	<div class="squarebox five"></div>
+	</div>
+	</div>
+</div>
+<!-- preloader end -->
+
+
+
+
+
+
+
+<header class="header three" style="background-image: url('http://localhost:4000/assets/img/header.jpg');">
+	<div class="container">
+		<div class="nav">
+			<div class="d-flex align-items-center">
+			<div class="logo">
+				<a href="http://localhost:4000" title="Waleed Khamies">
+				<img alt="logo" src="/assets/img/logo.png">
+				</a>
+			</div>
+			<ul class="menu">
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/books/">Books</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/projects/">Projects</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/services/">Services</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/blog/">Blog</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="https://shop.waleedkhamies.com">Store</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/news/">News</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/about/">About</a>
+					
+				</li>
+				
+				
+				<li class="menu-item">
+					<a class="splitting-text-anim-2" data-splitting="chars" href="/contact/">Contact</a>
+					
+				</li>
+				
+			</ul>
+			</div>
+			<div>
+				<form id="searchForm" class="search-form" method="GET" action="/search.html">
+					<input type="text" class="input search-field" id="search-input" value="" />
+					<button type="reset" class="search" id="search-btn"></button>
+					<ul id="results-container"></ul>
+				</form>
+				<a href="/contact/" class="themebtu">Contact</a>
+			</div>
+			<div class="bar-menu">
+			<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+		<div class="res-log">
+			<a href="http://localhost:4000" title="Waleed Khamies">
+			<img src="http://localhost:4000/assets/img/logo.png" alt="logo">
+			</a>
+		</div>
+		<ul>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/books/">Books</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/projects/">Projects</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/services/">Services</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/blog/">Blog</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="https://khamiesw.substack.com">Zitoona AI</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="https://shop.waleedkhamies.com">Store</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/news/">News</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/about/">About</a>
+				
+			</li>
+			
+			
+			<li class="menu-item">
+				<a class="splitting-text-anim-2" data-splitting="chars" href="/contact/">Contact</a>
+				
+			</li>
+			
+		</ul>
+		<a href="JavaScript:void(0)" id="res-cross"></a>
+	</div>
+</header>
+<!-- Wrapper -->
+    <div class="wrapper portfolio-template">
+      
+
+
+
+
+
+<section class="gap no-top">
+	<div class="container">
+	  <div class="title-blog">
+		<h2>T5WikiX: T5 Fine-Tuning on Wikihow and XSum</h2>
+		<span>Music</span>
+	  </div>
+	  <div class="row">
+		<div class="col-xl-8">
+		  <div class="blog-item hoverstyle">
+			
+			<figure>
+			  <img alt="img" class="w-100" src="http://localhost:4000/assets/img/projects/t5_cover.png">
+			</figure>
+			
+			
+			<div class="post-content">
+				<h2 id="t5wikix-t5-fine-tuning-on-wikihow-and-xsum">T5WikiX: T5 Fine-tuning on Wikihow and XSum.</h2>
+
+<h3 id="table-of-contents-book">Table of Contents :book:</h3>
+
+<ul>
+  <li><strong><a href="#Introduction">Introduction</a></strong></li>
+  <li><strong><a href="#Setup">Setup</a></strong></li>
+  <li><a href="#Run-the-code"><strong>Run the code</strong></a></li>
+  <li><strong><a href="#Training">Training</a></strong></li>
+  <li><strong><a href="#Sample-Generation">Sample Generation</a></strong></li>
+  <li><strong><a href="#Connect-with-me">Connect with me</a></strong></li>
+  <li><strong><a href="#License">License</a></strong></li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>This is a Pytorch implementation of a summarization model that has been fine-tuned on the top of Google-T5 pre-trained model. The implementation uses HuggingFace <code class="language-plaintext highlighter-rouge">transformers</code> and <code class="language-plaintext highlighter-rouge">datasets</code> libraries while model has been fine-tuned on two public summarization datasets, Wikihow and Xsum. For validation and testing the quality of the summary, <code class="language-plaintext highlighter-rouge">rouge-1</code> metric has been used.</p>
+
+<p>This is a <code class="language-plaintext highlighter-rouge">For-Learning</code> :green_book: project, where Google-Colab has been used as a running environment, and due to the limited budget :moneybag:  ( at this time :grin:) I could not be able to fully tune the model.</p>
+
+<p><img src="/assets/img/projects/t5.png" align="center" height="300" width="800" /></p>
+
+<h3 id="setup">Setup</h3>
+
+<p>The code is using <code class="language-plaintext highlighter-rouge">pipenv</code> as a virtual environment and package manager. To run the code, all you need is to install the necessary dependencies. open the terminal and type:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$ git clone https://github.com/Khamies/T5-Fine-tune-Wikihow-XSum</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$ cd T5-Fine-tune-Wikihow-XSum</code></li>
+  <li><code class="language-plaintext highlighter-rouge">$ pipenv install</code></li>
+</ul>
+
+<p>or</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$ pip install requirements.txt </code></li>
+</ul>
+
+<p>And you should be ready to go to play with code and build upon it, Yay! :v:</p>
+
+<h3 id="run-the-code-">Run the code :</h3>
+
+<ul>
+  <li>To train the model, run: <code class="language-plaintext highlighter-rouge">python main.py</code></li>
+  <li>To train the model with specific arguments, run: <code class="language-plaintext highlighter-rouge">python main.py --tr_batch_size = 4</code>. The following command-line arguments are available:
+    <ul>
+      <li>Dataset: <code class="language-plaintext highlighter-rouge">--dataset</code> ( currently supporting <strong><code class="language-plaintext highlighter-rouge">--wiki</code> and <code class="language-plaintext highlighter-rouge">--xsuum</code></strong>)</li>
+      <li>Train batch size: <code class="language-plaintext highlighter-rouge">--tr_batch_size</code></li>
+      <li>Validation batch size: <code class="language-plaintext highlighter-rouge">--val_batch_size</code></li>
+      <li>Learning rate: <code class="language-plaintext highlighter-rouge">--lr</code></li>
+      <li>Metric: <code class="language-plaintext highlighter-rouge">rouge</code> ( <strong>rouge-1</strong>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="training">Training</h3>
+
+<p>The model is fine-tuned using AdamW as an optimizer with a <code class="language-plaintext highlighter-rouge">learning rate = 0.001</code> and <code class="language-plaintext highlighter-rouge">batch size = 4</code>, you can find all the model settings in <a href="https://github.com/Khamies/T5-Fine-tune-Wikihow-XSum/blob/main/settings.py">settings.py</a>. Here is the loss curve for the training step:</p>
+
+<ul>
+  <li>
+    <p><strong>Cross Entropy Loss</strong></p>
+
+    <ul>
+      <li><strong>Wikihow</strong></li>
+    </ul>
+
+    <p><img src="/assets/img/projects/t5_wiki_tr_loss.png" align="center" height="300" width="500" /></p>
+
+    <ul>
+      <li>
+        <p><strong>Xsum</strong></p>
+
+        <p><img src="/assets/img/projects/t5_tr_loss.png" align="center" height="300" width="500" /></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="sample-generation">Sample Generation</h3>
+
+<p>Here are some generated samples from the model:</p>
+
+<ul>
+  <li>Wikihow</li>
+</ul>
+
+<p><strong>Paragraph</strong></p>
+
+<blockquote>
+  <p><strong>It can be difficult to figure out emotions or feelings if you’re autistic, so the first thing to do is to determine if you have a crush on this person. Find a way of sorting out what you feel by writing it out or talking about it with a trusted friend, and look for any key signs that you might have a crush. Does this person cause a jumble of thoughts to come rushing into your head all at once? You could have a crush on them. If you want to spend most of your time with this person, or if something exciting happens and you wish they were there to see it, then you may have a crush.</strong> 
+<strong>If you stim when excited or nervous, try to keep an eye on how much you’re stimming whenever you’re around this person. If you start stimming a lot whenever you think of or are around this person, then it’s possible you have a crush. If you smile a lot when thinking about them or talking to them, you could possibly have a crush. If you could previously speak somewhat smoothly around this person, and now you’re suddenly tripping over your words, or are unsure of what to say all the time around them, you could have a crush. If you are shy around this person and are afraid of the impression you’ll give off in conversation, you probably have a crush.</strong> 
+<strong>If you regularly fantasize about spending time with this person, or even things like dating or kissing them, you definitely have a crush.;, If you do have a crush, pretending that you don’t have a crush isn’t a very good course of action! While it can seem like a great way of dealing with it, when you eventually end up admitting it to yourself, it’ll only end up making it worse. It’s important to accept your feelings and recognize how you think of this person. Sometimes, crushes can make you feel funny or like there’s something wrong with you. It’s important to realize that there’s nothing wrong with having a crush on someone, and that most people end up getting a crush at some point in their life. As long as you respect the person you have a crush on and don’t do anything to intentionally make them uncomfortable, there’s nothing wrong with liking someone</strong></p>
+</blockquote>
+
+<p><strong>Machine Summary</strong></p>
+
+<blockquote>
+  <p><strong>Determine if you have a crush on this person.</strong> 
+<strong>Keep an eye on how much you’re stimming.</strong> 
+<strong>Recognize how you think of this person.</strong> 
+<strong>Know that there’s nothing wrong with having a crush</strong>.</p>
+</blockquote>
+
+<p>It seems the model has become a therapist now :astonished: :joy:</p>
+
+<ul>
+  <li>Xsum</li>
+</ul>
+
+<p><strong>Paragraph</strong></p>
+
+<blockquote>
+  <p><strong>The move is in response to an £8m cut in the subsidy received from the Department of Employment and Learning (DEL). The cut in undergraduate places will come into effect from September 2015. Job losses will be among both academic and non-academic staff and Queen’s says no compulsory redundancies should be required. There are currently around 17,000 full-time undergraduate and postgraduate students at the university, and around 3,800 staff. Queen’s has a current intake of around 4,500 undergraduates per year.</strong> 
+<strong>The university aims to reduce the number of student places by 1,010 over the next three years. The BBC understands that there are no immediate plans to close departments or courses, but that the cuts in funding may put some departments and courses at risk. The Education Minister Stephen Farry said he recognised that some students might now choose to study in other areas of the UK because of the cuts facing Northern Ireland’s universities. “Some people will now be forced to look to opportunities in other parts of Great Britain and may not return to our economy,” he said. “Defunding our investment in skills, particularly at a time when we’re trying to grow the economy does not make a lot of sense. What’s happening is we’re going backwards. “The loss of any place is damaging to our economy, all subjects teach our young people critical skills.” Queen’s vice-chancellor Patrick Johnston said the cuts had the potential to damage the reputation of the university. “The potential negative impact, not just on the university but on the local economy is very significant,” he said. “It’s the last thing we want to do, but we have to begin to focus on those areas where we can grow the organisation and develop it - it’s clear we can no longer depend on the public purse to fund tuition.</strong> 
+<strong>If we’re not competitive we will not attract the best students, and we will not attract the best staff.” Just under £100m, a third of the university’s income, comes from the Northern Ireland Executive. DEL’s budget was reduced by £62m earlier this year, and its budget for higher education institutions fell from £203m to £186m, a reduction of 8.2%. Ulster University announced in February that it was dropping 53 courses. It will be cutting jobs and student places, but it has not yet revealed how many.</strong></p>
+</blockquote>
+
+<p><strong>Machine Summary</strong></p>
+
+<blockquote>
+  <p><strong>The number of full-time undergraduate and postgraduate students at the University of Northern Ireland’s Queen’s has been cut by £100m over the next three years.</strong></p>
+</blockquote>
+
+<h2 id="citation">Citation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> @misc{Khamies2021T5Fine-tune-Wikihow-XSum,
+ author = {Khamies, Waleed},
+ title = {A pytorch Google-T5 fine-tuned summarization model on Wikihow and Xsum datasets.},
+ year = {2022},
+ publisher = {GitHub},
+ journal = {GitHub repository},
+ howpublished = {\url{https://github.com/Khamies/T5-Fine-tune-Wikihow-XSum}},
+ }
+</code></pre></div></div>
+
+<h3 id="license">License</h3>
+
+<p><img src="https://img.shields.io/github/license/khamies/T5-Fine-tune-Wikihow-XSum" alt="GitHub" /></p>
+
+
+			</div>
+			
+			<div class="row align-items-center post-gallery">
+				
+			</div>
+
+			
+			
+
+		  </div>
+		  </div>
+		  <div class="col-xl-4 pl-60">
+		  
+		  <ul class="sidebar">
+			
+			<li>
+			  <h4>Project Description : </h4>
+			  <span>This is a Pytorch implementation of a summarization model that is fine-tuned on the top of Google-T5 pre-trained model.</span>
+			</li>
+			
+			<li>
+			  <h4>Tags : </h4>
+			  <span>nlp, pytorch, transformer summarization rouge-l abstractive-summarization wikihow xsum hugging-face t5-model</span>
+			</li>
+			
+			<li>
+			  <h4>Year : </h4>
+			  <span>2021</span>
+			</li>
+			
+			<li>
+			  <h4>Category :</h4>
+			  <span>Music</span>
+			</li>
+			<li>
+			  <h4>Share :</h4>
+			  <ul class="brandicon">
+				<li><a href="#" class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-reddit share-btn-3" title="Share on Reddit"><i class="fa-brands fa-reddit"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-pinterest share-btn-4" title="Share on Pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+				<li><a href="#" class="share-btn share-btn-linkedin share-btn-5" title="Share on Linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+			  </ul>
+			</li>
+			<li>
+			  <a href="https://github.com/Khamies/T5-Fine-tune-Wikihow-XSum" class="themebtu">Access</a>
+			</li>
+		  </ul>
+		</div>
+		</div>
+		
+	  </div>
+  </section>
+
+  
+  <div class="next-previous-page">
+	<div class="container">
+	  <div class="next-previous">
+		
+		
+	  </div>
+	</div>
+  </div>
+  
+    </div>
+
+    <!-- Footer -->
+
+
+
+
+<!-- Footer -->
+<footer class="footer gap no-bottom" style="background-color: #222 ;">
+	<div class="container">
+	  <div class="row">
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="footer-logo">
+			<a href="http://localhost:4000" title="Waleed Khamies"><img alt="logo" src="http://localhost:4000/assets/img/logo.png"></a>
+			<p>
+			  Applied ML Scientist
+			</p>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="links">
+			<h6>Additional Links</h6>
+			<ul>
+        	  
+			  <li><a href="http://localhost:4000/about/">About Us</a></li>
+			  
+			  <li><a href="http://localhost:4000/services/">Services</a></li>
+			  
+			  <li><a href="http://localhost:4000/team/">Team</a></li>
+			  
+			  <li><a href="http://localhost:4000/blog/">News</a></li>
+			  
+			  <li><a href="http://localhost:4000/contact/">Contact Us</a></li>
+			  
+			</ul>
+		  </div>
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  
+		  <div class="latest-news">
+			<h6>Latest News</h6>
+			<ul>
+			  
+			  <li class="pt-4">
+				  <p><a href="/documentation/2021/07/13/designer-conference-at-florida-2020/">Designer Conference at Florida 2020</a></p>
+				  <span>13 July 2021</span>
+			  </li>
+			  
+			  <li class="pt-4">
+				  <p><a href="/design/2021/07/13/you-must-know-this-before-becoming-a-designer/">You must know this before becoming a designer</a></p>
+				  <span>13 July 2021</span>
+			  </li>
+			  
+			</ul>
+		  </div>
+		  
+		</div>
+		<div class="col-xl-3 col-lg-4 col-md-6">
+		  <div class="latest-news">
+			<h6>Subscribe</h6>
+			<p>Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.</p>
+			<form class="subscribe-form" action="" method="post" target="_blank">
+				<input type="text" name="EMAIL" placeholder="your email address">
+				<input type="hidden" name="">
+				<button type="submit">Go</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	  <div class="footer-bottom">
+		<p>&copy; 2023 Waleed Khamies - All Rights Reserved | Developed by <a href="https://bslthemes.com" target="_blank">bslthemes</a></p>
+		<ul>
+      	  
+		  <li><a href="https://twitter.com/khamiesw" target="_blank" title="Twitter"><i aria-hidden="true" class="fa-brands fa-twitter"></i></a></li>
+		  
+		  <li><a href="https://www.medium.com/@khamiesw" target="_blank" title="Medium"><i aria-hidden="true" class="fa-solid fa-m"></i></a></li>
+		  
+		  <li><a href="https://www.linkedin.com/in/khamiesw/" target="_blank" title="Linkedin"><i aria-hidden="true" class="fa-brands fa-linkedin-in"></i></a></li>
+		  
+		</ul>
+	  </div>
+	</div>
+</footer>
+<!-- Back to Top -->
+    <a href="#." id="button"></a>
+
+    <!-- Scripts --><!-- Plugins -->
+<script src="/assets/plugins/jQuery/jquery.min.js"></script>
+<script src="/assets/plugins/bootstrap/bootstrap.js"></script>
+<script src="/assets/plugins/validate/jquery.validate.min.js"></script>
+<script src="/assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="/assets/plugins/imagesloaded/imagesloaded.pkgd.js"></script>
+<script src="/assets/plugins/isotope/isotope.pkgd.js"></script>
+<script src="/assets/plugins/isotope/isotope-init.js"></script>
+<script src="/assets/plugins/swiper/swiper.js"></script>
+<script src="/assets/plugins/rrssb/rrssb.js"></script>
+<script src="/assets/js/simple-jekyll-search.js"></script>
+<script src="/assets/js/form-handler.js"></script>
+
+<!-- Main -->
+<script src="/assets/js/common.js"></script>
+</body>
+
+</html>

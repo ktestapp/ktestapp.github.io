@@ -71,14 +71,20 @@ footer:
 portfolio:
   homeNumOfItems: 12
   filters:
-    - name: "Design"
-      slug: "design"
+    - name: "Deep Learning"
+      slug: "deeplearning"
 
-    - name: "Print"
-      slug: "print"
+    - name: "NLP"
+      slug: "nlp"
 
-    - name: "Branding"
-      slug: "branding"
+    - name: "Music"
+      slug: "music"
+
+    - name: "Generative Modeling"
+      slug: "generative_modeling"
+      
+    - name: "RL"
+      slug: "rl"
 
 books:
   homeNumOfItems: 12
